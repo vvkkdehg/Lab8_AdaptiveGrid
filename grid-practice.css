@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "sidebar main widget1"
+        "sidebar main widget2"
+        "footer footer footer";
+    grid-template-columns: 200px 1fr 300px;
+    grid-template-rows: 80px 1fr 1fr 60px;
+    gap: 15px;
+    min-height: 600px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.header {
+    grid-area: header;
+    background-color: orangered;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: gray;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.main {
+    grid-area: main;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.widget1 {
+    grid-area: widget1;
+    background-color: green;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.widget2 {
+    grid-area: widget2;
+    background-color: purple;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: blue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 20px;
+}
